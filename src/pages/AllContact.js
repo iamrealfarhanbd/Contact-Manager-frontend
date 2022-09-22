@@ -50,7 +50,7 @@ const AllContact = () => {
   const deleteContact = async (id) => {
     if (window.confirm("are you sure you want to delete this contact ?")) {
       try {
-        const res = await fetch(`http://localhost:8000/api/delete/${id}`, {
+        const res = await fetch(`https://yourcontactmanager.herokuapp.com/api/delete/${id}`, {
           method: "DELETE",
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,

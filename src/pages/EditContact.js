@@ -29,7 +29,7 @@ const EditContact = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    const res = await fetch(`http://localhost:8000/api/contact`, {
+    const res = await fetch(`https://yourcontactmanager.herokuapp.com/api/contact`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -52,7 +52,7 @@ const EditContact = () => {
     async function fetchData() {
     setLoading(true);
     try {
-      const res = await fetch(`http://localhost:8000/api/contact/${id}`, {
+      const res = await fetch(`https://yourcontactmanager.herokuapp.com/api/contact/${id}`, {
         method: "GET",
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
